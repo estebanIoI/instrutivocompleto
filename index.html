@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Planos Premium Muebles Montessori</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #0d9488, #14b8a6);
+            color: white;
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 32px 16px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0d9488;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        /* PARA QUIÉN ES */
+        .para-quien {
+            background: #fef3c7;
+        }
+
+        .para-quien .badge {
+            background: #f59e0b;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .para-quien ul {
+            list-style: none;
+        }
+
+        .para-quien li {
+            padding: 8px 0;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .para-quien li::before {
+            content: "✓";
+            color: #0d9488;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* PRODUCTO IMAGEN */
+        .producto-img {
+            text-align: center;
+            padding: 24px 16px;
+            background: #f8fafc;
+        }
+
+        .producto-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* BENEFICIOS */
+        .beneficios {
+            background: #ecfdf5;
+        }
+
+        .beneficios ul {
+            list-style: none;
+        }
+
+        .beneficios li {
+            background: white;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border-left: 4px solid #0d9488;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* OPORTUNIDAD */
+        .oportunidad {
+            background: #fff;
+        }
+
+        .oportunidad-box {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .precio-rango {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #b45309;
+            margin: 12px 0;
+        }
+
+        .oportunidad p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        /* QUÉ INCLUYE */
+        .incluye {
+            background: #f0fdfa;
+        }
+
+        .incluye-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .incluye-item {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .incluye-item .emoji {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .incluye-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0d9488;
+            margin-bottom: 4px;
+            display: inline;
+        }
+
+        .incluye-item p {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        /* BONOS */
+        .bonos {
+            background: #fef3c7;
+        }
+
+        .bono-item {
+            background: white;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            border: 2px dashed #f59e0b;
+        }
+
+        .bono-item h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #b45309;
+            margin-bottom: 6px;
+        }
+
+        .bono-item p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* OFERTA */
+        .oferta {
+            background: linear-gradient(135deg, #0d9488, #0f766e);
+            color: white;
+            text-align: center;
+        }
+
+        .urgencia-banner {
+            background: #dc2626;
+            color: white;
+            padding: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .contador {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .contador-item {
+            background: white;
+            color: #0d9488;
+            padding: 12px 16px;
+            border-radius: 10px;
+            min-width: 60px;
+        }
+
+        .contador-item .num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: block;
+        }
+
+        .contador-item .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .precio-antiguo {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .precio-actual {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .precio-nota {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .cupos {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: 16px;
+        }
+
+        /* LISTA INCLUIDO */
+        .lista-pack {
+            background: #fff;
+            text-align: left;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .lista-pack li {
+            padding: 8px 0;
+            font-size: 0.9rem;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lista-pack li:last-child {
+            border-bottom: none;
+        }
+
+        .lista-pack li::before {
+            content: "✅";
+        }
+
+        /* BOTÓN CTA */
+        .cta-btn {
+            display: block;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            text-decoration: none;
+            padding: 18px 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+            margin: 20px auto;
+            max-width: 350px;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-5px);
+            }
+            75% {
+                transform: translateX(5px);
+            }
+        }
+
+        .cta-btn {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .cta-btn:hover {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        /* GARANTÍA */
+        .garantia {
+            background: #f0fdf4;
+            text-align: center;
+        }
+
+        .garantia-box {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            border: 3px solid #22c55e;
+        }
+
+        .garantia-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        .garantia h3 {
+            color: #16a34a;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .garantia p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* COMPRA SEGURA */
+        .segura {
+            text-align: center;
+            padding: 20px 16px;
+            background: #fff;
+        }
+
+        .segura img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* TESTIMONIOS */
+        .testimonios {
+            background: #f8fafc;
+        }
+
+        .testimonio {
+            background: white;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .testimonio-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .testimonio-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0d9488, #14b8a6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .testimonio-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .testimonio-info .verified {
+            font-size: 0.75rem;
+            color: #0d9488;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .testimonio p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* FAQ */
+        .faq {
+            background: #fff;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 16px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.2rem;
+            color: #0d9488;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #0d9488;
+        }
+
+        /* WHATSAPP */
+        .telegram-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #0088cc;
+            color: white;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 20px auto;
+            max-width: 320px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* BOTÓN FLOTANTE */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        .floating-cta .cta-btn {
+            margin: 0 auto;
+        }
+
+        /* Espacio para el botón flotante */
+        .spacer {
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER: Título + Subtítulo -->
+    <header class="header">
+        <div class="container">
+            <h1>Genera El Sueldo De Todo Un Mes Trabajando Solo Este Sábado y Domingo</h1>
+            <p>Transforma una placa de pino económica en Muebles Montessori que se venden a $250 USD cada uno</p>
+        </div>
+    </header>
+
+    <!-- PARA QUIÉN ES -->
+    <section class="para-quien">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="badge">¿Para quién es?</span>
+            </div>
+            <ul>
+                <li>Emprendedores</li>
+                <li>Carpinteros</li>
+                <li>Personas sin experiencia previa</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- IMAGEN PRODUCTO -->
+    <section class="producto-img">
+        <div class="container">
+            <img src="image/producto.png" alt="Pack Planos Premium Muebles Montessori">
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios">
+        <div class="container">
+            <h2 class="section-title">Con El Pack Muebles Montessori</h2>
+            <ul>
+                <li>✅ Emprendé desde casa con bajo costo</li>
+                <li>✅ Aprovechá una tendencia en crecimiento</li>
+                <li>✅ Creá un negocio rentable y escalable</li>
+                <li>✅ Construí muebles que se pagan bien</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- OPORTUNIDAD DE MERCADO -->
+    <section class="oportunidad">
+        <div class="container">
+            <h2 class="section-title">Oportunidad De Mercado</h2>
+            <div class="oportunidad-box">
+                <p>Los muebles Montessori son una gran <strong>tendencia</strong>.</p>
+                <p>Se perciben como <strong>muebles educativos de alto valor</strong>.</p>
+                <p>Precios de venta habituales:</p>
+                <div class="precio-rango">$80.000 a $350.000 por mueble</div>
+                <p>Con pocas ventas al mes generás un <strong>ingreso real, escalable y desde casa</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUÉ INCLUYE -->
+    <section class="incluye">
+        <div class="container">
+            <h2 class="section-title">Diseños Que Incluye</h2>
+            <div class="incluye-grid">
+                <div class="incluye-item">
+                    <span class="emoji">🛏️</span>
+                    <h4>Camas Montessori</h4>
+                    <p>Seguros, muy demandados y de alto valor.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">🪜</span>
+                    <h4>Torres de Aprendizaje</h4>
+                    <p>Producto estrella, se vende rápido y con gran margen.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">📚</span>
+                    <h4>Libreros Montessori</h4>
+                    <p>Fáciles de fabricar y muy buscados.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">🪑</span>
+                    <h4>Mesas y Sillas Infantiles</h4>
+                    <p>Venta recurrente, complemento ideal para packs.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">🛝</span>
+                    <h4>Rampas y Juegos Motrices</h4>
+                    <p>Diferenciales, educativos y altamente valorados.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">🪞</span>
+                    <h4>Muebles Sensoriales</h4>
+                    <p>Estimulan desarrollo temprano, pocos competidores.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">🧸</span>
+                    <h4>Organizadores y Guardado</h4>
+                    <p>Prácticos, vendibles y de fabricación simple.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">🔄</span>
+                    <h4>Muebles Evolutivos</h4>
+                    <p>Crecen con el niño, justifican precio premium.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">📦</span>
+                    <h4>Muebles Modulares</h4>
+                    <p>Permiten vender por partes y aumentar ticket.</p>
+                </div>
+                <div class="incluye-item">
+                    <span class="emoji">🎨</span>
+                    <h4>Muebles de Actividades</h4>
+                    <p>Aportan valor educativo y atractivo visual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BONOS -->
+    <section class="bonos">
+        <div class="container">
+            <h2 class="section-title">🎁 Bonos Incluidos</h2>
+            <div class="bono-item">
+                <h4>📱 Cómo Vender en Redes Sociales</h4>
+                <p>Sistema probado para mostrar tus muebles, generar confianza y vender.</p>
+            </div>
+            <div class="bono-item">
+                <h4>💰 Cómo Calcular Costos y Precios</h4>
+                <p>Método exclusivo para fijar precios altos.</p>
+            </div>
+            <div class="bono-item">
+                <h4>🧸 Planos de Juguetes Montessori</h4>
+                <p>Simples de fabricar y difíciles de encontrar.</p>
+            </div>
+            <div class="bono-item">
+                <h4>📐 Planos de Muebles Plegables</h4>
+                <p>Ideales para espacios reducidos.</p>
+            </div>
+            <div class="bono-item">
+                <h4>🌳 Planos de Muebles de Exterior</h4>
+                <p>Para construir y vender.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="oferta">
+        <div class="container">
+            <div class="urgencia-banner">
+                ⚡ Oferta disponible solo por hoy: Sábado, 27 de diciembre de 2025
+            </div>
+
+            <h2 style="font-size: 1.3rem; margin-bottom: 16px;">El Pack Completo Incluye:</h2>
+
+            <ul class="lista-pack">
+                <li>100 Planos de Muebles Montessori</li>
+                <li>Cómo Vender en Redes Sociales</li>
+                <li>Cómo Calcular Costos y Precios</li>
+                <li>Planos de Juguetes Montessori</li>
+                <li>Planos de Muebles Plegables</li>
+                <li>Planos de Muebles de Exterior</li>
+                <li>Pago Único</li>
+                <li>Acceso de por vida</li>
+                <li>Acceso a actualizaciones</li>
+            </ul>
+
+            <p style="margin-bottom: 8px;">Oferta disponible hasta que finalice el contador</p>
+
+            <div class="contador">
+                <div class="contador-item">
+                    <span class="num" id="horas">01</span>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="contador-item">
+                    <span class="num" id="minutos">43</span>
+                    <span class="label">Minutos</span>
+                </div>
+                <div class="contador-item">
+                    <span class="num" id="segundos">02</span>
+                    <span class="label">Segundos</span>
+                </div>
+            </div>
+
+            <p class="precio-antiguo">COP $320.000</p>
+            <p class="precio-actual">COP $75.250</p>
+            <p class="precio-nota">Oferta en Colombia 🇨🇴 · *El precio subirá en breve</p>
+
+            <a href="https://go.hotmart.com/G103561253L?ap=c9cf" class="cta-btn" target="_blank">INSCRIBETE AQUÍ CON 7 DÍAS DE GARANTÍA</a>
+
+            <div class="cupos">
+                👀 59 personas viendo esta página ahora<br>
+                ⏳ SOLO QUEDAN 4 CUPOS CON DESCUENTO
+            </div>
+        </div>
+    </section>
+
+    <!-- GARANTÍA -->
+    <section class="garantia">
+        <div class="container">
+            <div class="garantia-box">
+                <div class="garantia-icon">🛡️</div>
+                <h3>7 DÍAS DE GARANTÍA</h3>
+                <p>Si no quedas satisfecho, te devolvemos tu dinero. Sin preguntas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPRA SEGURA -->
+    <section class="segura">
+        <div class="container">
+            <img src="image/compra%20100%25%20segura.png" alt="Compra 100% Segura - Métodos de pago">
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonios">
+        <div class="container">
+            <h2 class="section-title">⭐ Opiniones Verificadas</h2>
+
+            <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">L</div>
+                    <div class="testimonio-info">
+                        <h4>Lorena B.</h4>
+                        <span class="verified">✓ Verificado</span>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>Armé mi primera Torre de Aprendizaje en un finde y la vendí la misma semana. Los planos son premium.</p>
+            </div>
+
+            <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">M</div>
+                    <div class="testimonio-info">
+                        <h4>Mariana T.</h4>
+                        <span class="verified">✓ Verificado</span>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>Lo que pagué lo recuperé rápido. Empecé desde casa y ya tengo pedidos de cama baja y librero.</p>
+            </div>
+
+            <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">S</div>
+                    <div class="testimonio-info">
+                        <h4>Silvina R.</h4>
+                        <span class="verified">✓ Verificado</span>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>Yo no soy carpintera y aún así pude hacerlo. Ya vendí dos mesas con sillas bajas.</p>
+            </div>
+
+            <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">G</div>
+                    <div class="testimonio-info">
+                        <h4>Gabriela S.</h4>
+                        <span class="verified">✓ Verificado</span>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>Ajusté con el método de precios y ahora vendo menos, pero gano más por cada mueble.</p>
+            </div>
+
+            <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">M</div>
+                    <div class="testimonio-info">
+                        <h4>María José V.</h4>
+                        <span class="verified">✓ Verificado</span>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>La guía para vender en redes es oro. Pasé de "subo y espero" a tener consultas todos los días.</p>
+            </div>
+
+            <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">P</div>
+                    <div class="testimonio-info">
+                        <h4>Patricia D.</h4>
+                        <span class="verified">✓ Verificado</span>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>Armé una cama baja impecable y la clienta me recomendó con dos amigas. Se nota que está pensado para vender.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué pasa si no tengo experiencia en carpintería?</div>
+                <div class="faq-answer">No hay problema. Los planos están súper bien explicados y cualquier persona con o sin experiencia puede seguirlos.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo recibo el acceso al material?</div>
+                <div class="faq-answer">Inmediatamente después de tu compra recibirás acceso a todo el material.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿En qué formato está el material?</div>
+                <div class="faq-answer">Todo el material está en formato digital, fácil de ver desde cualquier dispositivo.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Es un solo pago?</div>
+                <div class="faq-answer">Sí, es un pago único con acceso de por vida y actualizaciones incluidas.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TELEGRAM -->
+    <section style="padding: 24px 16px; text-align: center; background: #e0f2fe;">
+        <div class="container">
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">¿Tienes alguna duda?</p>
+            <a href="#" class="telegram-btn">
+                ✈️ HABLEMOS POR TELEGRAM
+            </a>
+        </div>
+    </section>
+
+    <!-- BOTÓN FINAL -->
+    <section style="padding: 40px 16px; text-align: center; background: linear-gradient(135deg, #fef3c7, #fde68a);">
+        <div class="container">
+            <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">El momento es ahora.</p>
+            <p style="font-size: 0.95rem; margin-bottom: 20px;">No postergues más lo que puede cambiar tu vida.</p>
+            <a href="https://go.hotmart.com/G103561253L?ap=c9cf" class="cta-btn" style="background: linear-gradient(135deg, #dc2626, #b91c1c);" target="_blank">
+                🔥 INSCRIBETE AHORA
+            </a>
+            <p style="font-size: 0.85rem; margin-top: 16px; color: #b45309;">
+                <strong>Cupos Limitados:</strong> ¡Reserva tu cupo y asegura tu lugar!
+            </p>
+        </div>
+    </section>
+
+    <!-- SPACER para botón flotante -->
+    <div class="spacer"></div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Pack Muebles Montessori. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE -->
+    <div class="floating-cta">
+        <a href="https://go.hotmart.com/G103561253L?ap=c9cf" class="cta-btn" style="margin: 0 auto;" target="_blank">INSCRIBETE AQUÍ 🔥</a>
+    </div>
+
+    <!-- SCRIPT CONTADOR -->
+    <script>
+        function actualizarContador() {
+            const ahora = new Date();
+            const finDia = new Date();
+            finDia.setHours(23, 59, 59, 999);
+            
+            const diferencia = finDia - ahora;
+            
+            const horas = Math.floor(diferencia / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+            
+            document.getElementById('horas').textContent = String(horas).padStart(2, '0');
+            document.getElementById('minutos').textContent = String(minutos).padStart(2, '0');
+            document.getElementById('segundos').textContent = String(segundos).padStart(2, '0');
+        }
+        
+        actualizarContador();
+        setInterval(actualizarContador, 1000);
+    </script>
+
+</body>
+</html>
